@@ -1,0 +1,45 @@
+<!-- made by: rafabelts on January 28 2025 -->
+<!DOCTYPE html>
+<html lang="es_MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      rel="viewport"
+      content="width=device-width, initial-scale=1,
+    user-scalable=1"
+    />
+
+    <title>Shopping List</title>
+
+    <link
+      rel="icon"
+      size="16x16 32x32 64x64"
+      type="image/jpeg"
+      href="./images.jpg"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Mi lista del super</h1>
+    </header>
+
+    <main>
+      <form id="items-form">
+        <label for="items-input"> Añade un nuevo articulo </label>
+
+        <input id="items-input" type="text" />
+        <p id="error-message" aria-label="Shows error message"></p>
+
+        <button type="submit">Añadir</button>
+      </form>
+
+      <section>
+        <ul id="article-list"></ul>
+      </section>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
