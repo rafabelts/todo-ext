@@ -1,5 +1,5 @@
 // made by: rafabelts on January 28 2025
-import { addToList, clearError, mapTasks, getTasks, deleteFromList } from './src/actions/index.js';
+import { addToList, clearError, mapTasks, getTasks, deleteFromList, updateTaskTotal} from './src/actions/index.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("items-form");
@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tasks = getTasks();
 
-    taskTotal.textContent = tasks.length;
+    updateTaskTotal(taskTotal, tasks)
 
     addToList(form, input, errorParagraph, list);
 
     if (errorParagraph !== "") input.addEventListener("input", () => clearError(input, errorParagraph))
 
-    deleteFromList(tasks, list, taskTotal);
+    deleteFromList(tasks, list);
 
 });
