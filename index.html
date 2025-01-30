@@ -9,26 +9,27 @@
     user-scalable=1"
     />
 
-    <title>Shopping List</title>
+    <title>Todoer</title>
 
     <link
       rel="icon"
       size="16x16 32x32 64x64"
       type="image/jpeg"
-      href="./images.jpg"
+      href="./src/assets/images.jpg"
     />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./src/styles/styles.css" />
   </head>
 
   <body>
     <header>
-      <h1>Mi lista del super</h1>
+      <h1>Por hacer:</h1>
+      <p id="task-total" aria-label="Show the total of tasks reminding"></p>
     </header>
 
     <main>
       <form id="items-form">
-        <label for="items-input"> Añade un nuevo articulo </label>
+        <label for="items-input"> Añade una nueva tarea </label>
 
         <input id="items-input" type="text" />
         <p id="error-message" aria-label="Shows error message"></p>
@@ -40,6 +41,6 @@
         <ul id="article-list"></ul>
       </section>
     </main>
-    <script src="./script.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
   </body>
 </html>
